@@ -24,9 +24,9 @@ public class AccountPayload implements Serializable {
 
     private BigDecimal balance;
 
-    private Long scannerId;
-
-    private Set<Member> members;
+//    private Long scannerId;
+//
+//    private Set<Member> members;
 
     // Constructors, Getters, Setters, etc.
 }

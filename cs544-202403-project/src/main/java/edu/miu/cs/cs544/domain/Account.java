@@ -1,5 +1,9 @@
 package edu.miu.cs.cs544.domain;
 
+
+import jakarta.persistence.*;
+import lombok.Data;
+
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Set;
@@ -15,8 +19,8 @@ public class Account implements Serializable {
     private Long id;
 
     private String description;
-    private String name; 
-    
+    private String name;
+
     @Enumerated(EnumType.STRING)
     private AccountType accountType;
     
@@ -26,8 +30,9 @@ public class Account implements Serializable {
     @ManyToMany
     private Set<Member> members;
 
-    @ManyToOne
-    private Scanner scanner;
+//    @ManyToOne
+//    private Scanner scanner;
+
     public Account() {}
 
    public Account(String description, String name, AccountType accountType, BigDecimal balance, Set<Account> Accounts, Set<Member> members) {
@@ -38,4 +43,5 @@ public class Account implements Serializable {
         this.defaultBalance = defaultBalance;
         this.members = members;
     }
+
 }

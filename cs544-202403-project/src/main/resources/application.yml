@@ -3,15 +3,14 @@ common:
     enabled: false
   feign-oauth:
     enabled: false
+spring:
   mvc:
     enabled: false
 server:
   port: ${SERVER_PORT:8080}
   ssl:
-    enabled: false
   servlet:
     context-path: /badge-system
-spring:
   mail:
     host: sandbox.smtp.mailtrap.io
     port: 25

@@ -9,6 +9,6 @@ import org.springframework.stereotype.Component;
 
 @Component
 public interface AccountService extends BaseReadWriteService<AccountPayload, Account, Long> {
-	
+
 	List<AttendancePayload> getAttendanceByAccountIdAndStartTimeAndEndTime(Long accountId, String startTime, String endTime);
 }
