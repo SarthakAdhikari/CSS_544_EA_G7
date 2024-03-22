@@ -22,6 +22,9 @@ public class Event implements Serializable {
     private LocalDateTime startDateTime;
     private LocalDateTime endDateTime;
 
+    @Enumerated(EnumType.STRING)
+    private  AccountType accountType;
+
     @OneToMany(mappedBy = "event")
     @JsonIgnore
     private List<Schedule> schedules;
@@ -31,13 +34,14 @@ public class Event implements Serializable {
 
     public Event() {}
 
-    public Event(String name, String description, LocalDateTime startDateTime, LocalDateTime endDateTime, List<Schedule> schedules, Set<Member> members) {
+    public Event(String name, String description, LocalDateTime startDateTime, LocalDateTime endDateTime, List<Schedule> schedules, Set<Member> members, AccountType accountType) {
         this.name = name;
         this.description = description;
         this.startDateTime = startDateTime;
         this.endDateTime = endDateTime;
         this.schedules = schedules;
         this.members = members;
+        this.accountType = accountType;
     }
     @Override
     public String toString() {

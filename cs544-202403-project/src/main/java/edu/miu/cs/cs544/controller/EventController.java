@@ -3,8 +3,10 @@ package edu.miu.cs.cs544.controller;
 
 import edu.miu.common.controller.BaseReadWriteController;
 import edu.miu.common.exception.ResourceNotFoundException;
+import edu.miu.cs.cs544.domain.Event;
 import edu.miu.cs.cs544.domain.Session;
 import edu.miu.cs.cs544.service.SessionService;
+import edu.miu.cs.cs544.service.contract.EventPayload;
 import edu.miu.cs.cs544.service.contract.SessionPayload;
 import edu.miu.cs.cs544.service.contract.SessionRequestPayload;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +18,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/events")
-public class EventController extends BaseReadWriteController<SessionPayload, Session, Long> {
+public class EventController extends BaseReadWriteController<EventPayload, Event, Long> {
     @Autowired
     private SessionService sessionService;
 

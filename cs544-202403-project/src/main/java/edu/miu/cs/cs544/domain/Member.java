@@ -34,7 +34,7 @@ public class Member implements Serializable {
     private List<Role> roles;
 
     //One member can have One-Many accounts
-    @ManyToMany (cascade = CascadeType.REMOVE)
+    @ManyToMany (cascade = CascadeType.REMOVE, fetch = FetchType.EAGER)
     private List<Account> accounts;
 
     //One-Many members can have One-Many events

@@ -19,6 +19,7 @@ public class Scanner implements Serializable {
     private Event event;
 
 
+
     @OneToMany(mappedBy = "scanner")
     private List<Record> records;
 

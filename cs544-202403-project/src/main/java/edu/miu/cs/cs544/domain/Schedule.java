@@ -26,7 +26,7 @@ public class Schedule implements Serializable {
     @JsonIgnore
     private Set<Session> sessions;
 
-      @ManyToOne(fetch = FetchType.EAGER)
+      @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
       @JoinColumn
       @JsonIgnore
     private Event event;
